@@ -60,8 +60,8 @@ int main(int argc, char **argv){
 	out_frame = "";
 	nh.getParam("out_frame",out_frame);
 
-	laser_pub = n.advertise<sensor_msgs::LaserScan>("/scan", 5);
-	ros::Subscriber sub = n.subscribe("/scan_inv", 5, scanCB);
+	laser_pub = n.advertise<sensor_msgs::LaserScan>("/scan_inv", 5);
+	ros::Subscriber sub = n.subscribe("/scan", 5, scanCB);
 
 	ros::spin();
 }

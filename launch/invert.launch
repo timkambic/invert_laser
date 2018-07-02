@@ -2,4 +2,6 @@
     <node pkg="invert_laser" type="invert_laser_node" name="invert_laser">
         <param name="out_frame" value="laser_inv"/>
     </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="lidar2lidar_inv" args="0 0 0 0 0 3.14159  laser laser_inv 10" />
 </launch>
